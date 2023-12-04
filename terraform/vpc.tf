@@ -2,7 +2,7 @@ data "aws_availability_zones" "ec2_az" {
   state = "available"
   filter {
     name   = "opt-in-status"
-    values = ("opt-in-not-required")
+    values = ["opt-in-not-required"]
   }
 }
 

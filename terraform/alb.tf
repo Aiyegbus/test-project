@@ -1,5 +1,5 @@
 resource "aws_alb" "main_lb" {
-  name               = "public loadbalancer"
+  name               = "public-loadbalancer"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.loadbalancer.id]
@@ -7,7 +7,7 @@ resource "aws_alb" "main_lb" {
 }
 
 resource "aws_lb_target_group" "main_lb_target" {
-  name        = "Load balancer target group"
+  name        = "Load-balancer-target-group"
   port        = 80
   protocol    = "HTTP"
   vpc_id      = aws_vpc.main.id

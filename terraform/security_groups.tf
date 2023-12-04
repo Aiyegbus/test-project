@@ -1,5 +1,5 @@
 resource "aws_security_group" "loadbalancer" {
-  name        = "Main Security group"
+  name        = "Main-Security-group"
   description = "security group for the load balancer"
   vpc_id      = aws_vpc.main.id
 
@@ -32,7 +32,7 @@ resource "aws_security_group" "loadbalancer" {
 }
 
 resource "aws_security_group" "main_sg" {
-  name        = "ec2 Security group"
+  name        = "ec2-Security-group"
   description = "Security Group for EC2 instances"
   vpc_id      = aws_vpc.main.id
 
