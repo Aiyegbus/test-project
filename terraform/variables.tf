@@ -24,5 +24,13 @@ variable "ami_key_pair_name" {
 
 variable "vpc_cidr" {
   description = "cidr block"
-  default     = ""
+  default     = "10.0.0.0/16"
+}
+
+variable "subnet_count" {
+  default = 2
+}
+
+variable "az_count" {
+  default = 2
 }
